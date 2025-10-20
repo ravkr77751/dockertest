@@ -12,7 +12,7 @@ jobs:
     container:
       image: docker.io/ravkr77751/dockertest
       credentials:
-        username: ${{ github.actor }}
-        password: ${{ secrets.github_token }}
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{  secrets.DOCKERHUB_TOKEN }}
       
 
