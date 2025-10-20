@@ -1,1 +1,18 @@
+name: Devanddeploy
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types:
+    - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    container:
+      image: docker.io/ravkr77751/dockertest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.github_token }}
+      
 
