@@ -37,6 +37,6 @@ jobs:
     steps:
       -
         name: run dev script
-          run ./dev_run.sh
+          run: dev_run.sh
           
           
