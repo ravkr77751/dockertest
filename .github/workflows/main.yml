@@ -36,7 +36,10 @@ jobs:
     container: docker.io/ravkr77751/dockertest:v1.0
     steps:
       -
+        name: makeexec
+        run: chmod u+x dev_run.sh
+      -
         name: rundevscript
-        run: dev_run.sh
+        run: ./dev_run.sh
           
           
