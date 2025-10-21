@@ -11,8 +11,8 @@ jobs:
     container:
       image: docker.io/ravkr77751/dockertest
       credentials:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
         -
           steps:
             name: Checkout
