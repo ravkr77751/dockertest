@@ -27,7 +27,7 @@ jobs:
       credentials:
         username: ${{secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-    if: ${{ needs.dev.result == "success"}}
+    if: ${{ needs.dev.result == 'success'}}
     steps:
       -
         name: Ckeckout
