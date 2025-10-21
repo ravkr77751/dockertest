@@ -17,8 +17,12 @@ jobs:
         name: Checkout
         uses: actions/checkout@v3
       -
-        name: makeexec
+        name: makeexecdev
         run: chmod +x ./dev_run.sh
+
+      -
+        name: rundevscript
+        run: ./dev_run.sh
   prod:
     runs-on: ubuntu-latest
     needs: [dev]
@@ -40,8 +44,6 @@ jobs:
         name: runprodscript
         run: ./prod_run.sh
 
-      -
-        name: make exec
-        run: chmod +x ./prod_run.sh
+     
       
 
