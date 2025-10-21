@@ -30,11 +30,15 @@ jobs:
     if: ${{ needs.dev.result == 'success'}}
     steps:
       -
-        name: Ckeckout
+        name: Checkout
         uses: actions/checkout@v3
       -
-        name: rundevscript
-        run: ./dev_run.sh
+        name: makeexecprod
+        run: chmod +x ./prod_run.sh
+
+      -
+        name: runprodscript
+        run: ./prod_run.sh
 
       -
         name: make exec
