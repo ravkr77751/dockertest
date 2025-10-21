@@ -9,10 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     container:
-      image: docker.io/ravkr77751/dockertest
+      image: docker.io/ravkr77751/dockertest:v1.0
       credentials:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
         -
           steps:
             name: Checkout
