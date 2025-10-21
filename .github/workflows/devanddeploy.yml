@@ -10,14 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: node:18
-      credentials:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
-        -
-          steps:
-            name: Checkout
-            uses: actions/checkout@v3
-            name: rundevscript
-            run: ./dev_run.sh
+      -
+        steps:
+          name: Checkout
+          uses: actions/checkout@v3
+          name: rundevscript
+          run: ./dev_run.sh
       
 
