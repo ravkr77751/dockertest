@@ -6,8 +6,13 @@ on:
     types: [completed]
 
 jobs:
-  deploy:
+  dev:
     runs-on: ubuntu-latest
+    container:
+      image: docker.io/ravkr77751/dockertest:v1.0
+      credentials:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
     steps:
       -
         name: Checkout
