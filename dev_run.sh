@@ -1,2 +1,2 @@
-echo "Dev Success"
-exit 0
+echo "Dev failed"
+exit 1
